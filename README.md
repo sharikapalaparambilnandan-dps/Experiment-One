@@ -2,15 +2,19 @@
 
 A static, no-build prototype of an accessible learning hub for Medical Tactile Examiner (MTE/MTU) trainees, designed with screen-reader users in mind. Exported from Claude Design.
 
+## Live site
+
+https://sharikapalaparambilnandan-dps.github.io/Experiment-One/
+
 ## Run locally
 
-    npx serve site        # or: cd site && python3 -m http.server 8000
+    npx serve .           # or: python3 -m http.server 8000
 
 Serve over http; don't open the files with `file://` (saved settings and the microphone need http).
 
 ## Structure
 
-- `site/` – the website. `index.html` redirects to `Main.dc.html`; one `*.dc.html` file per screen; `support.js` is the page runtime; `fonts/` holds self-hosted Inter.
+- Repo root – the website, served by GitHub Pages. `index.html` redirects to `Main.dc.html`; one `*.dc.html` file per screen; `support.js` is the page runtime; `fonts/` holds self-hosted Inter.
 - `docs/SPEC.md` – behaviour, content, state and accessibility spec.
 - `docs/screens/` – reference screenshots (light, dark, English, German).
 - `CLAUDE.md` / `START-HERE.md` – guidance for working on the project with Claude Code.

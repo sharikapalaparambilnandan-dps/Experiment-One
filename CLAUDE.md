@@ -6,7 +6,7 @@ Primary user: Lena, a trainee who lost most of her sight and works with a screen
 Read `docs/SPEC.md` for how every screen behaves and `docs/screens/` for how each one must look.
 
 ## Layout of this folder
-- `site/`            the working website (open this folder to run or deploy it)
+- repo root          the working website, deployed with GitHub Pages
   - `index.html`     redirects to `Main.dc.html`
   - `*.dc.html`      one file per screen: Main (Home), Glossary, LymphNode, LymphModule, Procedure, ProcedureGuide, Certification, Practice, Summary
   - `support.js`     the page runtime every `.dc.html` loads. Do not edit or delete it.
@@ -16,7 +16,7 @@ Read `docs/SPEC.md` for how every screen behaves and `docs/screens/` for how eac
 - `START-HERE.md`    install steps and ready-to-paste prompts
 
 ## Run locally
-    npx serve site        # or: cd site && python3 -m http.server 8000
+    npx serve .           # or: python3 -m http.server 8000
 Do not open the files with file:// (saved settings and the microphone need http).
 
 ## How each screen file is built
