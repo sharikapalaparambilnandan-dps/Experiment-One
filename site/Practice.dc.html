@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Practice question</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="stylesheet" href="fonts/inter.css">
+<style>
+html{scrollbar-gutter:stable}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#181818;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,dl,dd,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,textarea{font-family:inherit;font-size:inherit}
+a{color:#181818}
+.shell{background:#F1F7FC;min-height:100%}
+.muted{color:#595959}
+.h1{font-size:2.5em;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.h2{font-size:1.5em;line-height:1.3;font-weight:700}
+.h3{font-size:1.2em;line-height:1.35;font-weight:700}
+.sm{font-size:.9em}
+.b{font-weight:600}
+.side{background:#fff;border-right:1px solid #D5D5D5}
+.nav a{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border-radius:14px;text-decoration:none;color:#181818}
+.nav a:hover{background:#F1F7FC}
+.nav a[aria-current]{background:#F1F7FC}
+.dot{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid #6B6B6B;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.85em;background:#fff;box-sizing:border-box}
+.nav a[aria-current] .dot{background:#181818;color:#fff;border-color:#181818}
+.top{background:#fff;border-bottom:1px solid #D5D5D5}
+.tbtn{flex:none;white-space:nowrap;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid #6B6B6B;border-radius:10px;background:#fff;color:#181818;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;box-sizing:border-box}
+.tbtn:hover{border-color:#181818}
+.tbtn[aria-pressed=true]{background:#181818;color:#fff;border-color:#181818}
+.tbtn.dark{background:#181818;color:#fff;border-color:#181818}
+.card{background:#fff;border:1px solid #D5D5D5;border-radius:24px;padding:28px 32px}
+.pill{display:inline-block;padding:2px 12px;border-radius:20px;background:#EFEFEF;font-size:.8em;font-weight:600}
+.rc{display:flex;flex-direction:column;gap:12px;width:100%;box-sizing:border-box;padding:20px;border:1.5px solid #6B6B6B;border-radius:14px;background:#fff;color:#181818;text-align:left;cursor:pointer}
+.rc:hover{border-color:#181818}
+.rc.on{border:2px solid #181818;padding:19.5px;background:#F1F7FC}
+.rc[disabled]{cursor:not-allowed;background:#F7F7F7;border-style:dashed;color:#595959}
+.ico{flex:none;width:44px;height:44px;border-radius:50%;background:#F1F7FC;display:flex;align-items:center;justify-content:center}
+.rc.on .ico{background:#fff}
+.radio{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid #595959;box-sizing:border-box;background:#fff}
+.on .radio,.radio.on{border:2px solid #181818;background:radial-gradient(circle,#181818 0 6px,#fff 7px)}
+.opt{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:1.5px solid #6B6B6B;border-radius:10px;background:#fff;color:#181818;font-weight:600;cursor:pointer}
+.opt:hover{border-color:#181818}
+.opt.on{background:#181818;border-color:#181818;color:#fff}
+.selbtn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 4px;background:none;border:0;color:#181818;font-weight:600;cursor:pointer}
+.bar{background:#fff;border:1px solid #D5D5D5;border-radius:20px;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 28px;border-radius:10px;border:2px solid #6B6B6B;background:#fff;color:#181818;font-weight:600;text-decoration:none;cursor:pointer;box-sizing:border-box}
+.back:hover{border-color:#181818}
+.back.off{border-style:dashed;color:#6B6B6B;cursor:default}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;min-width:164px;padding:0 28px;border-radius:12px;background:#181818;color:#fff;font-weight:600;font-size:1.1em;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
+.go:hover{background:#000}
+.go.off{background:#D5D5D5;color:#595959;cursor:not-allowed}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:10px;background:#181818;color:#fff;font-weight:600;text-decoration:none;border:1.5px solid #181818;cursor:pointer}
+.btn.line{background:#fff;color:#181818;border-color:#6B6B6B}
+.btn.line:hover{border-color:#181818}
+.tint{background:#F1F7FC;border:1px solid #D5D5D5;border-radius:14px;padding:20px 24px}
+.term{font:inherit;font-weight:600;color:#181818;background:#DCEBFA;border:0;border-bottom:2px solid #181818;padding:0 5px;border-radius:5px 5px 0 0;cursor:pointer}
+.term:hover,.term.on{background:#181818;color:#fff}
+.tbtn,.btn,.back,.go,.opt,.selbtn{justify-content:center;text-align:center}
+.skip{position:absolute;left:-9999px;top:8px}
+.skip:focus{left:12px;z-index:50;padding:12px 18px;border-radius:10px;background:#181818;color:#fff;font-weight:600;text-decoration:none}
+input::placeholder,textarea::placeholder{color:#595959;opacity:1}
+:focus-visible{outline:3px solid #181818;outline-offset:3px;box-shadow:0 0 0 6px #fff}
+/* ===== COLOURS FROM THE REGISTRATION DESIGN — LIGHT MODE =====
+   page #FFFFFF · text #000000 · secondary #333333 · borders #000000 (1px frames, 2px cards, 3px selected)
+   accent #1D4ED8 · focus ring #2563EB · disabled #6B6B6B dashed · selected = black fill, white text */
+body{color:#000}
+a{color:#000}
+.shell{background:#fff}
+.muted{color:#333}
+.side{background:#fff;border-right:1px solid #000}
+.nav a{color:#000}
+.nav a:hover{background:transparent}
+.nav a[aria-current]{background:#000;color:#fff}
+.nav a[aria-current] .muted{color:#ccc}
+.dot{border:1px solid #000;background:#fff;color:#000}
+.nav a[aria-current] .dot{background:#fff;color:#000;border-color:#fff}
+.top{background:#fff;border-bottom:1px solid #000}
+.tbtn{border:1px solid #000;background:#fff;color:#000}
+.tbtn:hover{border-color:#000}
+.tbtn[aria-pressed=true]{background:#000;color:#fff;border-color:#000}
+.card{background:#fff;border:1px solid #000}
+.pill{background:#fff;border:1px solid #000;color:#000}
+.rc{border:2px solid #000;background:#fff;color:#000}
+.rc:hover{border-color:#000}
+.rc.on{border:3px solid #000;padding:19px;background:#000;color:#fff}
+.rc.on .muted{color:#ccc}
+.rc.on .dot{background:#fff;color:#000;border-color:#fff}
+.rc.off,.rc[disabled]{background:#fff;border:2px dashed #6B6B6B;color:#6B6B6B;padding:20px}
+.rc.off .muted{color:#6B6B6B}
+.ico{background:#fff;border:2px solid #000}
+.rc.on .ico{background:#fff;border-color:#fff}
+.radio{border:2px solid #000;background:#fff}
+.on .radio,.radio.on{border:2px solid #fff;background:radial-gradient(circle,#fff 0 6px,#000 7px)}
+a.rc:hover .radio,a.rc:focus-visible .radio{border:2px solid #000;background:radial-gradient(circle,#000 0 6px,#fff 7px)}
+.opt{border:2px solid #000;background:#fff;color:#000}
+.opt:hover{border-color:#000}
+.opt.on{background:#000;border-color:#000;color:#fff}
+.selbtn{color:inherit}
+.selbtn[disabled]{color:#6B6B6B}
+.bar{background:#fff;border:1px solid #000}
+.back{border:2px solid #000;background:#fff;color:#000}
+.back:hover{border-color:#000}
+.back.off{border-style:dashed;border-color:#6B6B6B;color:#6B6B6B}
+.go{background:#1D4ED8;color:#fff;border:2px solid #1D4ED8}
+.go:hover{background:#1D4ED8}
+.go.off{background:#fff;border:2px dashed #6B6B6B;color:#6B6B6B}
+.btn{background:#1D4ED8;color:#fff;border:2px solid #1D4ED8}
+.btn.line{background:#fff;color:#000;border:2px solid #000}
+.btn.line:hover{border-color:#000}
+.tint{background:#fff;border:1px solid #000;color:#000}
+.term{color:#000;background:#fff;border-bottom:2px solid #1D4ED8}
+.term:hover{background:#1D4ED8;color:#fff}
+.term.on{background:#000;color:#fff;border-bottom-color:#000}
+.skip:focus{background:#1D4ED8;color:#fff}
+input::placeholder,textarea::placeholder{color:#333}
+:focus-visible{outline:3px solid #2563EB;outline-offset:3px;box-shadow:none}
+.ptrack{background:#fff !important;border:2px solid #000;box-sizing:border-box;border-radius:999px !important;overflow:hidden}
+.pfill{background:#1D4ED8 !important;height:100% !important;border-radius:0 !important}
+.logo{background:#fff !important;border:2px solid #000;box-sizing:border-box}
+.logo svg{stroke:#000}
+.sidep{border-top:1px solid #000 !important}
+.rc.off .radio{border-color:#6B6B6B}
+.rc.on svg[stroke="#000000"]{stroke:#fff}
+.rc.on .ico svg[stroke="#000000"]{stroke:#000}
+/* ===== COLOURS FROM THE REGISTRATION DESIGN — DARK MODE (the contrast button) =====
+   page #000000 · text #FFFFFF · secondary #CCCCCC · borders #FFFFFF · accent #2563EB
+   focus ring #2563EB · disabled #9A9A9A dashed · selected = white fill, black text */
+.shell.hc{background:#000;color:#fff}
+.hc a{color:#fff}
+.hc .muted{color:#ccc}
+.hc .side,.hc .top,.hc .card,.hc .bar{background:#000;border-color:#fff;color:#fff}
+.hc .nav a{color:#fff}
+.hc .nav a[aria-current]{background:#fff;color:#000}
+.hc .nav a[aria-current] .muted{color:#333}
+.hc .dot{background:#000;color:#fff;border-color:#fff}
+.hc .nav a[aria-current] .dot{background:#000;color:#fff;border-color:#000}
+.hc .tbtn{background:#000;color:#fff;border-color:#fff}
+.hc .tbtn:hover{border-color:#fff}
+.hc .tbtn[aria-pressed=true]{background:#fff;color:#000;border-color:#fff}
+.hc .pill{background:#000;color:#fff;border-color:#fff}
+.hc .rc{background:#000;color:#fff;border-color:#fff}
+.hc .rc:hover{border-color:#fff}
+.hc .rc.on{background:#fff;color:#000;border-color:#fff}
+.hc .rc.on .muted{color:#333}
+.hc .rc.on .dot{background:#000;color:#fff;border-color:#000}
+.hc .rc.off,.hc .rc[disabled]{background:#000;border-color:#9A9A9A;color:#9A9A9A}
+.hc .rc.off .muted{color:#9A9A9A}
+.hc .rc.off .radio{border-color:#9A9A9A}
+.hc .ico{background:#000;border-color:#fff}
+.hc .rc.on .ico{background:#fff;border-color:#000}
+.hc .radio{background:#000;border-color:#fff}
+.hc .on .radio,.hc .radio.on{border:2px solid #000;background:radial-gradient(circle,#000 0 6px,#fff 7px)}
+.hc a.rc:hover .radio,.hc a.rc:focus-visible .radio{border:2px solid #fff;background:radial-gradient(circle,#fff 0 6px,#000 7px)}
+.hc .opt{background:#000;color:#fff;border-color:#fff}
+.hc .opt:hover{border-color:#fff}
+.hc .opt.on{background:#fff;color:#000;border-color:#fff}
+.hc .selbtn{color:inherit}
+.hc .selbtn[disabled]{color:#9A9A9A}
+.hc .back{background:#000;color:#fff;border-color:#fff}
+.hc .back:hover{border-color:#fff}
+.hc .back.off{border-color:#9A9A9A;color:#9A9A9A}
+.hc .go{background:#2563EB;border-color:#2563EB;color:#fff}
+.hc .go:hover{background:#2563EB}
+.hc .go.off{background:#000;border:2px dashed #9A9A9A;color:#9A9A9A}
+.hc .btn{background:#2563EB;border-color:#2563EB;color:#fff}
+.hc .btn.line{background:#000;color:#fff;border-color:#fff}
+.hc .btn.line:hover{border-color:#fff}
+.hc .tint{background:#000;border-color:#fff;color:#fff}
+.hc .term{background:#000;color:#fff;border-bottom-color:#2563EB}
+.hc .term:hover{background:#2563EB;color:#fff}
+.hc .term.on{background:#fff;color:#000;border-bottom-color:#fff}
+.hc .skip:focus{background:#2563EB;color:#fff}
+.hc strong{color:inherit !important}
+.hc input,.hc textarea{background:#000 !important;color:#fff !important;border-color:#fff !important}
+.hc input::placeholder,.hc textarea::placeholder{color:#ccc}
+.hc [role=alert]{color:#FF9A9A !important}
+.hc .ptrack{background:#000 !important;border-color:#fff}
+.hc .pfill{background:#2563EB !important}
+.hc .logo{background:#000 !important;border-color:#fff}
+.hc .logo svg{stroke:#fff}
+.hc .sidep{border-top-color:#fff !important}
+.hc svg[stroke="#000000"]{stroke:#fff}
+.hc .rc.on svg[stroke="#000000"]{stroke:#000}
+.hc .rc.on .ico svg[stroke="#000000"]{stroke:#000}
+.hc audio{color-scheme:dark}
+.hc :focus-visible{outline:3px solid #2563EB;outline-offset:3px;box-shadow:none}
+/* ===== RESPONSIVE / REFLOW (WCAG 1.4.10): no sideways scrolling down to 320px ===== */
+h1,h2,h3,.h1,.h2,.h3,.b,p,.muted,label,li,dd,dt,a,button{overflow-wrap:anywhere}
+.nav a{min-height:44px;box-sizing:border-box}
+@media (max-width: 900px){
+  div.shell{grid-template-columns:minmax(0,1fr) !important;min-height:0 !important}
+  .side{border-right:0 !important;border-bottom:1px solid #000;padding:16px !important}
+  .hc .side{border-bottom-color:#fff}
+  .nav ul{flex-direction:row !important;flex-wrap:wrap;gap:6px !important}
+  .nav a{padding:8px 12px;align-items:center}
+  .nav a > span:last-child > span:nth-child(n+2){display:none}
+  .top{height:auto !important;padding:12px 16px !important;flex-wrap:wrap !important}
+  .top > div{flex:1 1 100% !important;flex-wrap:wrap !important;justify-content:flex-start !important;min-width:0}
+  main{padding:16px !important;gap:24px !important}
+  .card{padding:20px !important}
+  [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr) !important}
+  .bar{flex-wrap:wrap}
+  .bar > div{flex-wrap:wrap;width:100%;justify-content:space-between}
+  .go{min-width:0 !important}
+  .h1{font-size:2em !important}
+  aside[aria-label]{position:static !important}
+}
+@media (max-width: 480px){
+  .back,.go,.btn{width:100%;box-sizing:border-box}
+  .bar > div{gap:12px !important}
+  .rc > *,.rc span{min-width:0}
+  .rc [style*="space-between"]{flex-wrap:wrap;gap:8px}
+  .bar > div > div{text-align:left !important;width:100%}
+}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</helmet>
+<sc-if value="{{isEn}}" hint-placeholder-val="{{ true }}">
+<div lang="en" class="{{hcCls}}" style="font-size:{{fs}};display:grid;grid-template-columns:372px minmax(0,1fr);min-height:1000px">
+<a class="skip" href="#main">Skip to main content</a>
+<div class="side" style="padding:24px 18px">
+<header><a href="Main.dc.html" aria-label="MTE Learning, Home" style="display:flex;gap:14px;align-items:center;text-decoration:none;padding:0 4px;min-height:44px"><span class="logo" style="width:40px;height:40px;border-radius:12px;background:#000000;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5h6a3 3 0 013 3V20a2.5 2.5 0 00-2.5-2.5H3zM21 5.5h-6a3 3 0 00-3 3V20a2.5 2.5 0 012.5-2.5H21z"/></svg></span><span><span class="b" style="display:block;font-size:1.15em;line-height:1.2">MTE Learning</span><span class="muted" style="display:block;font-size:.75em;font-weight:600;letter-spacing:.1em">TRAINING PORTAL</span></span></a></header>
+<p class="muted" style="margin:32px 4px 14px;font-size:.75em;font-weight:700;letter-spacing:.08em" aria-hidden="true">YOUR STUDY</p>
+<nav class="nav" aria-label="Main"><ul style="display:flex;flex-direction:column;gap:8px"><li><a href="Main.dc.html" aria-label="Home" aria-describedby="nd1"><span class="dot" aria-hidden="true">1</span><span><span class="b" style="display:block">Home</span><span id="nd1" class="muted sm" style="display:block">Choose what to do</span></span></a></li><li><a href="Glossary.dc.html" aria-label="Glossary" aria-describedby="nd2"><span class="dot" aria-hidden="true">2</span><span><span class="b" style="display:block">Glossary</span><span id="nd2" class="muted sm" style="display:block">Look up a word</span></span></a></li><li><a href="LymphModule.dc.html" aria-label="Learning modules" aria-describedby="nd3"><span class="dot" aria-hidden="true">3</span><span><span class="b" style="display:block">Learning modules</span><span id="nd3" class="muted sm" style="display:block">Short readings</span></span></a></li><li><a href="Procedure.dc.html" aria-label="Procedures" aria-describedby="nd4"><span class="dot" aria-hidden="true">4</span><span><span class="b" style="display:block">Procedures</span><span id="nd4" class="muted sm" style="display:block">Review the steps</span></span></a></li><li><a href="Practice.dc.html" aria-current="page" aria-label="Practice" aria-describedby="nd5"><span class="dot" aria-hidden="true">5</span><span><span class="b" style="display:block">Practice</span><span id="nd5" class="muted sm" style="display:block">Check your understanding</span><span class="sm" style="display:block;font-weight:700;font-size:.75em;letter-spacing:.04em;margin-top:6px" aria-hidden="true">CURRENT PAGE</span></span></a></li><li><a href="Certification.dc.html" aria-label="Certification prep" aria-describedby="nd6"><span class="dot" aria-hidden="true">6</span><span><span class="b" style="display:block">Certification prep</span><span id="nd6" class="muted sm" style="display:block">Choose what to study next</span></span></a></li><li><a href="Summary.dc.html" aria-label="Task summary" aria-describedby="nd7"><span class="dot" aria-hidden="true">7</span><span><span class="b" style="display:block">Task summary</span><span id="nd7" class="muted sm" style="display:block">See how it went</span></span></a></li></ul></nav>
+<div class="sidep" role="region" aria-labelledby="sp-lbl" style="margin:28px 4px 0;padding-top:20px;border-top:1px solid #D5D5D5"><p class="b sm" id="sp-lbl">Today’s progress</p><p class="muted sm">{{doneN}} of 5 done</p><div class="ptrack" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{doneN}}" aria-valuetext="{{doneN}} of 5 done" aria-labelledby="sp-lbl" style="margin-top:8px;height:10px;border-radius:10px;background:#D5D5D5"><div class="pfill" style="height:10px;border-radius:10px;background:#000000;width:{{pctW}}"></div></div></div>
+</div>
+<div style="display:flex;flex-direction:column;min-width:0">
+<div class="top" role="region" aria-label="Display and language settings" style="height:80px;box-sizing:border-box;padding:0 30px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:20px"><span class="sr" id="h-lang">Switches the whole page between English and German.</span><span class="sr" id="h-big">Makes all text larger. Press again to return to normal size.</span><span class="sr" id="h-hc">Switches to a black screen with white text. Press again to go back.</span>
+<div style="display:flex;flex-wrap:nowrap;gap:12px;flex:none;justify-content:flex-end">
+<button type="button" class="tbtn" onClick="{{toggleLang}}" aria-describedby="h-lang" aria-label="Language: English. Switch to Deutsch" lang="en"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h9M8.5 3v2M6 5c.5 3.5 3 6.5 6.500 8M12 5c-.5 3.500-3.500 6.500-8 8.500M13 20l4-9 4 9M14.500 17h5"/></svg>English</button>
+<button type="button" class="tbtn" aria-pressed="{{bigP}}" aria-describedby="h-big" onClick="{{toggleBig}}"><span aria-hidden="true" style="font-weight:700">aA</span>Text size</button>
+<button type="button" class="tbtn" aria-pressed="{{hcP}}" aria-describedby="h-hc" onClick="{{toggleHc}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.500"></circle></svg>High contrast</button>
+</div></div>
+<main id="main" tabindex="-1" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m" style="padding:30px;display:flex;flex-direction:column;gap:36px">
+<section class="card" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m">
+<p id="pt-e" style="font-size:.95em">Practice</p>
+<h1 id="pt" class="h1" aria-describedby="pt-e pt-i pt-m" style="margin-top:6px">Practice question</h1>
+<p class="muted" id="pt-i" style="margin-top:12px;max-width:760px;font-size:1.05em">One short question. It isn’t a test; it just helps you decide what to review.</p><p class="b sm" id="pt-m" style="margin-top:20px;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>1 question · About 1 minute</p>
+</section>
+<section class="card" aria-labelledby="k1">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Question 1 of 1</p><span class="pill">Required</span></div>
+<h2 id="k1" class="h2" style="margin:14px 0 20px">Which medical word means the armpit?</h2>
+<div role="group" aria-labelledby="k1" aria-describedby="pq-h1"><span class="sr" id="pq-h1">Choose one answer, then press Check my answer.</span><ul style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="4"><li><button type="button" class="{{o.cls}}" aria-pressed="{{o.on}}" onClick="{{o.pick}}">
+<span style="display:flex;justify-content:space-between;align-items:center;width:100%"><span class="h3">{{o.text}}</span><span class="radio" aria-hidden="true"></span></span>
+<span class="b sm" aria-hidden="true" style="display:flex;align-items:center;gap:8px"><span style="display:{{o.chk}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7"></path></svg></span>{{o.sel}}</span></button></li></sc-for></ul></div>
+<sc-if value="{{showError}}" hint-placeholder-val="{{ false }}"><p role="alert" class="b" style="margin-top:16px;color:#8A1C1C">Choose one answer first, then check it.</p></sc-if>
+<div style="margin-top:22px"><span class="sr" id="pq-h2">Shows a short clue below.</span><button type="button" class="btn line" aria-expanded="{{hint}}" onClick="{{toggleHint}}" aria-describedby="pq-h2">{{hintLabel}}</button></div>
+<sc-if value="{{hint}}" hint-placeholder-val="{{ false }}"><p class="tint" style="margin-top:14px">It is also where many lymph nodes sit.</p></sc-if>
+</section>
+<div role="status" aria-live="polite"><sc-if value="{{submitted}}" hint-placeholder-val="{{ false }}">
+<section class="card" aria-labelledby="fb">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Your feedback</p><span class="pill">{{verdict}}</span></div>
+<h2 id="fb" class="h2" style="margin-top:14px">{{headline}}</h2>
+<p style="margin-top:6px;font-size:1.1em">You chose: <strong>{{picked.text}}</strong>. {{picked.feedback}}</p>
+<h3 class="h3" style="margin-top:22px">Why the answer is “Axilla”</h3>
+<p style="margin-top:6px;max-width:700px;font-size:1.1em">Axilla is the medical word for the armpit. It matters because it holds many of the lymph nodes you check during a breast examination.</p>
+<div class="tint" style="margin-top:24px"><h3 class="h3">{{reviewHead}}</h3><p class="muted" style="margin-top:4px">{{reviewSub}}</p>
+<div style="margin-top:14px"><a class="btn" href="{{picked.href}}">Review: {{picked.review}}</a></div></div>
+</section></sc-if></div>
+<div class="bar" role="navigation" aria-label="Page navigation"><span class="sr" id="pq-h3">Checks your chosen answer and shows feedback above this bar.</span><a class="back" aria-label="Back to Procedures" href="Procedure.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Back</a>
+<div style="display:flex;align-items:center;gap:28px">
+<div style="text-align:right"><p class="b sm">{{status}}</p><p class="muted sm">{{nextLine}}</p></div><sc-if value="{{notChecked}}" hint-placeholder-val="{{ true }}"><button type="button" class="go" onClick="{{submit}}" aria-describedby="pq-h3">Check my answer <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></sc-if><sc-if value="{{checked}}" hint-placeholder-val="{{ false }}"><a class="go" aria-label="Continue to Certification prep" href="Certification.dc.html">Continue <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></sc-if></div></div>
+</main></div></div>
+</sc-if>
+<sc-if value="{{isDe}}" hint-placeholder-val="{{ false }}">
+<div lang="de" class="{{hcCls}}" style="font-size:{{fs}};display:grid;grid-template-columns:372px minmax(0,1fr);min-height:1000px">
+<a class="skip" href="#main">Zum Hauptinhalt springen</a>
+<div class="side" style="padding:24px 18px">
+<header><a href="Main.dc.html" aria-label="MTE Learning, Start" style="display:flex;gap:14px;align-items:center;text-decoration:none;padding:0 4px;min-height:44px"><span class="logo" style="width:40px;height:40px;border-radius:12px;background:#000000;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5h6a3 3 0 013 3V20a2.5 2.5 0 00-2.5-2.5H3zM21 5.5h-6a3 3 0 00-3 3V20a2.5 2.5 0 012.5-2.5H21z"/></svg></span><span><span class="b" style="display:block;font-size:1.15em;line-height:1.2">MTE Learning</span><span class="muted" style="display:block;font-size:.75em;font-weight:600;letter-spacing:.1em">LERNPORTAL</span></span></a></header>
+<p class="muted" style="margin:32px 4px 14px;font-size:.75em;font-weight:700;letter-spacing:.08em" aria-hidden="true">IHR LERNWEG</p>
+<nav class="nav" aria-label="Hauptnavigation"><ul style="display:flex;flex-direction:column;gap:8px"><li><a href="Main.dc.html" aria-label="Start" aria-describedby="nd1"><span class="dot" aria-hidden="true">1</span><span><span class="b" style="display:block">Start</span><span id="nd1" class="muted sm" style="display:block">Aufgabe wählen</span></span></a></li><li><a href="Glossary.dc.html" aria-label="Glossar" aria-describedby="nd2"><span class="dot" aria-hidden="true">2</span><span><span class="b" style="display:block">Glossar</span><span id="nd2" class="muted sm" style="display:block">Begriff nachschlagen</span></span></a></li><li><a href="LymphModule.dc.html" aria-label="Lernmodule" aria-describedby="nd3"><span class="dot" aria-hidden="true">3</span><span><span class="b" style="display:block">Lernmodule</span><span id="nd3" class="muted sm" style="display:block">Kurze Texte</span></span></a></li><li><a href="Procedure.dc.html" aria-label="Untersuchungsablauf" aria-describedby="nd4"><span class="dot" aria-hidden="true">4</span><span><span class="b" style="display:block">Untersuchungsablauf</span><span id="nd4" class="muted sm" style="display:block">Schritte ansehen</span></span></a></li><li><a href="Practice.dc.html" aria-current="page" aria-label="Übung" aria-describedby="nd5"><span class="dot" aria-hidden="true">5</span><span><span class="b" style="display:block">Übung</span><span id="nd5" class="muted sm" style="display:block">Verständnis prüfen</span><span class="sm" style="display:block;font-weight:700;font-size:.75em;letter-spacing:.04em;margin-top:6px" aria-hidden="true">AKTUELLE SEITE</span></span></a></li><li><a href="Certification.dc.html" aria-label="Prüfungsvorbereitung" aria-describedby="nd6"><span class="dot" aria-hidden="true">6</span><span><span class="b" style="display:block">Prüfungsvorbereitung</span><span id="nd6" class="muted sm" style="display:block">Nächstes Thema wählen</span></span></a></li><li><a href="Summary.dc.html" aria-label="Aufgabenübersicht" aria-describedby="nd7"><span class="dot" aria-hidden="true">7</span><span><span class="b" style="display:block">Aufgabenübersicht</span><span id="nd7" class="muted sm" style="display:block">Ergebnis ansehen</span></span></a></li></ul></nav>
+<div class="sidep" role="region" aria-labelledby="sp-lbl" style="margin:28px 4px 0;padding-top:20px;border-top:1px solid #D5D5D5"><p class="b sm" id="sp-lbl">Heutiger Fortschritt</p><p class="muted sm">{{doneN}} von 5 erledigt</p><div class="ptrack" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{doneN}}" aria-valuetext="{{doneN}} von 5 erledigt" aria-labelledby="sp-lbl" style="margin-top:8px;height:10px;border-radius:10px;background:#D5D5D5"><div class="pfill" style="height:10px;border-radius:10px;background:#000000;width:{{pctW}}"></div></div></div>
+</div>
+<div style="display:flex;flex-direction:column;min-width:0">
+<div class="top" role="region" aria-label="Anzeige- und Spracheinstellungen" style="height:80px;box-sizing:border-box;padding:0 30px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:20px"><span class="sr" id="h-lang">Wechselt die ganze Seite zwischen Englisch und Deutsch.</span><span class="sr" id="h-big">Macht die ganze Schrift größer. Erneut drücken für die normale Größe.</span><span class="sr" id="h-hc">Wechselt zu einem schwarzen Bildschirm mit weißer Schrift. Erneut drücken, um zurückzukehren.</span>
+<div style="display:flex;flex-wrap:nowrap;gap:12px;flex:none;justify-content:flex-end">
+<button type="button" class="tbtn" onClick="{{toggleLang}}" aria-describedby="h-lang" aria-label="Sprache: Deutsch. Wechseln zu English" lang="de"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h9M8.5 3v2M6 5c.5 3.5 3 6.5 6.500 8M12 5c-.5 3.500-3.500 6.500-8 8.500M13 20l4-9 4 9M14.500 17h5"/></svg>Deutsch</button>
+<button type="button" class="tbtn" aria-pressed="{{bigP}}" aria-describedby="h-big" onClick="{{toggleBig}}"><span aria-hidden="true" style="font-weight:700">aA</span>Schriftgröße</button>
+<button type="button" class="tbtn" aria-pressed="{{hcP}}" aria-describedby="h-hc" onClick="{{toggleHc}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.500"></circle></svg>Hoher Kontrast</button>
+</div></div>
+<main id="main" tabindex="-1" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m" style="padding:30px;display:flex;flex-direction:column;gap:36px">
+<section class="card" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m">
+<p id="pt-e" style="font-size:.95em">Übung</p>
+<h1 id="pt" class="h1" aria-describedby="pt-e pt-i pt-m" style="margin-top:6px">Übungsfrage</h1>
+<p class="muted" id="pt-i" style="margin-top:12px;max-width:760px;font-size:1.05em">Eine kurze Frage. Sie ist kein Test, sie hilft Ihnen nur zu entscheiden, was Sie wiederholen sollten.</p><p class="b sm" id="pt-m" style="margin-top:20px;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>1 Frage · Etwa 1 Minute</p>
+</section>
+<section class="card" aria-labelledby="k1">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Frage 1 von 1</p><span class="pill">Erforderlich</span></div>
+<h2 id="k1" class="h2" style="margin:14px 0 20px">Welches medizinische Wort bedeutet Achselhöhle?</h2>
+<div role="group" aria-labelledby="k1" aria-describedby="pq-h1"><span class="sr" id="pq-h1">Wählen Sie eine Antwort und drücken Sie dann Antwort prüfen.</span><ul style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="4"><li><button type="button" class="{{o.cls}}" aria-pressed="{{o.on}}" onClick="{{o.pick}}">
+<span style="display:flex;justify-content:space-between;align-items:center;width:100%"><span class="h3">{{o.text}}</span><span class="radio" aria-hidden="true"></span></span>
+<span class="b sm" aria-hidden="true" style="display:flex;align-items:center;gap:8px"><span style="display:{{o.chk}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7"></path></svg></span>{{o.sel}}</span></button></li></sc-for></ul></div>
+<sc-if value="{{showError}}" hint-placeholder-val="{{ false }}"><p role="alert" class="b" style="margin-top:16px;color:#8A1C1C">Wählen Sie zuerst eine Antwort und prüfen Sie sie dann.</p></sc-if>
+<div style="margin-top:22px"><span class="sr" id="pq-h2">Zeigt unten einen kurzen Hinweis.</span><button type="button" class="btn line" aria-expanded="{{hint}}" onClick="{{toggleHint}}" aria-describedby="pq-h2">{{hintLabel}}</button></div>
+<sc-if value="{{hint}}" hint-placeholder-val="{{ false }}"><p class="tint" style="margin-top:14px">Dort liegen auch viele Lymphknoten.</p></sc-if>
+</section>
+<div role="status" aria-live="polite"><sc-if value="{{submitted}}" hint-placeholder-val="{{ false }}">
+<section class="card" aria-labelledby="fb">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Ihre Rückmeldung</p><span class="pill">{{verdict}}</span></div>
+<h2 id="fb" class="h2" style="margin-top:14px">{{headline}}</h2>
+<p style="margin-top:6px;font-size:1.1em">Sie haben gewählt: <strong>{{picked.text}}</strong>. {{picked.feedback}}</p>
+<h3 class="h3" style="margin-top:22px">Warum die Antwort „Axilla“ lautet</h3>
+<p style="margin-top:6px;max-width:700px;font-size:1.1em">Axilla ist das medizinische Wort für die Achselhöhle. Das ist wichtig, weil dort viele der Lymphknoten liegen, die Sie bei einer Brustuntersuchung prüfen.</p>
+<div class="tint" style="margin-top:24px"><h3 class="h3">{{reviewHead}}</h3><p class="muted" style="margin-top:4px">{{reviewSub}}</p>
+<div style="margin-top:14px"><a class="btn" href="{{picked.href}}">Wiederholen: {{picked.review}}</a></div></div>
+</section></sc-if></div>
+<div class="bar" role="navigation" aria-label="Seitennavigation"><span class="sr" id="pq-h3">Prüft Ihre gewählte Antwort und zeigt die Rückmeldung oberhalb dieser Leiste.</span><a class="back" aria-label="Zurück zu Untersuchungsablauf" href="Procedure.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Zurück</a>
+<div style="display:flex;align-items:center;gap:28px">
+<div style="text-align:right"><p class="b sm">{{status}}</p><p class="muted sm">{{nextLine}}</p></div><sc-if value="{{notChecked}}" hint-placeholder-val="{{ true }}"><button type="button" class="go" onClick="{{submit}}" aria-describedby="pq-h3">Antwort prüfen <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></sc-if><sc-if value="{{checked}}" hint-placeholder-val="{{ false }}"><a class="go" aria-label="Weiter zu Prüfungsvorbereitung" href="Certification.dc.html">Weiter <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></sc-if></div></div>
+</main></div></div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); const a = this.loadA11y() || {}; this.state = { big: !!a.big, hc: !!a.hc, lang: a.lang === 'de' ? 'de' : 'en', done: Array.isArray(a.done) ? a.done : [], reminder: a.reminder || null, choice: null, submitted: false, error: false, hint: false }; }
+
+  chrome() {
+    const s = this.state;
+    return {
+      fs: s.big ? '19px' : '16px',
+      hcCls: s.hc ? 'shell hc' : 'shell',
+      bigP: s.big, hcP: s.hc,
+      doneN: (s.done || []).length, pctW: ((s.done || []).length / 5 * 100) + '%',
+      hasRem: !!s.reminder, remTime: s.reminder ? s.reminder.time : '',
+      clearRem: () => { this.saveA11y({ reminder: null }); this.setState({ reminder: null }); },
+      isEn: s.lang !== 'de', isDe: s.lang === 'de', enP: s.lang !== 'de', deP: s.lang === 'de',
+      toggleLang: () => { const l = s.lang === 'de' ? 'en' : 'de'; this.saveA11y({ lang: l }); this.setState({ lang: l }); },
+      setEn: () => { this.saveA11y({ lang: 'en' }); this.setState({ lang: 'en' }); },
+      setDe: () => { this.saveA11y({ lang: 'de' }); this.setState({ lang: 'de' }); },
+      toggleBig: () => { this.saveA11y({ big: !s.big }); this.setState({ big: !s.big }); },
+      toggleHc: () => { this.saveA11y({ hc: !s.hc }); this.setState({ hc: !s.hc }); },
+    };
+  }
+  loadA11y() {
+    let raw = null;
+    try { raw = localStorage.getItem('mte-a11y'); } catch (e) {}
+    if (!raw) { try { const m = document.cookie.match(/(?:^|; )mte-a11y=([^;]*)/); if (m) raw = decodeURIComponent(m[1]); } catch (e) {} }
+    if (!raw) { try { const m = (window.name || '').match(/mte-a11y=(\{[^}]*\})/); if (m) raw = m[1]; } catch (e) {} }
+    if (!raw) return null;
+    try { const v = JSON.parse(raw); const fresh = v.ts && (Date.now() - v.ts) < 3 * 3600 * 1000; /* a new session starts after 3 hours away */
+      return { big: !!v.big, hc: !!v.hc, lang: v.lang === 'de' ? 'de' : 'en', done: fresh && Array.isArray(v.done) ? v.done : [], reminder: v.reminder && v.reminder.day === new Date().toDateString() ? v.reminder : null }; } catch (e) { return null; }
+  }
+  saveA11y(p) {
+    const v = JSON.stringify({ big: this.state.big, hc: this.state.hc, lang: this.state.lang, done: this.state.done, reminder: this.state.reminder, ts: Date.now(), ...p });
+    try { localStorage.setItem('mte-a11y', v); } catch (e) {}
+    try { document.cookie = 'mte-a11y=' + encodeURIComponent(v) + ';path=/;max-age=31536000;SameSite=Lax'; } catch (e) {}
+    try { window.name = 'mte-a11y=' + v; } catch (e) {}
+  }
+  markDone(id) {
+    const cur = this.state.done || [];
+    if (cur.indexOf(id) >= 0) return;
+    const d = cur.concat([id]);
+    this.saveA11y({ done: d });
+    this.setState({ done: d });
+  }
+  componentDidMount() {
+    if (this.onMount) this.onMount();
+    this._a11yTimer = setInterval(() => {
+      const a = this.loadA11y();
+      if (a && (a.big !== this.state.big || a.hc !== this.state.hc || a.lang !== this.state.lang || JSON.stringify(a.done) !== JSON.stringify(this.state.done) || JSON.stringify(a.reminder) !== JSON.stringify(this.state.reminder))) this.setState(a);
+    }, 400);
+  }
+  componentWillUnmount() { clearInterval(this._a11yTimer); }
+
+  renderVals() {
+    const s = this.state;
+    const optsEn = [
+      { id: 'a', text: 'Axilla', feedback: 'Yes. The axilla is the armpit.', review: 'Lymph nodes: the axilla', href: 'LymphModule.dc.html' },
+      { id: 'b', text: 'Lesion', feedback: 'Not quite. A lesion is an area of tissue that looks or feels different from its surroundings.', review: 'Glossary: lesion', href: 'Glossary.dc.html' },
+      { id: 'c', text: 'Palpation', feedback: 'Not quite. Palpation means examining by touch.', review: 'Glossary: palpation', href: 'Glossary.dc.html' },
+      { id: 'd', text: 'Tissue', feedback: 'Not quite. Tissue is a group of similar cells that work together.', review: 'Glossary: tissue', href: 'Glossary.dc.html' },
+    ];
+    const optsDe = [
+      { id: 'a', text: 'Axilla', feedback: 'Ja. Die Axilla ist die Achselhöhle.', review: 'Lymphknoten: die Axilla', href: 'LymphModule.dc.html' },
+      { id: 'b', text: 'Läsion', feedback: 'Nicht ganz. Eine Läsion ist ein Gewebebereich, der anders aussieht oder sich anders anfühlt als seine Umgebung.', review: 'Glossar: Läsion', href: 'Glossary.dc.html' },
+      { id: 'c', text: 'Palpation', feedback: 'Nicht ganz. Palpation bedeutet, durch Berührung zu untersuchen.', review: 'Glossar: Palpation', href: 'Glossary.dc.html' },
+      { id: 'd', text: 'Gewebe', feedback: 'Nicht ganz. Gewebe ist eine Gruppe ähnlicher Zellen, die zusammenarbeiten.', review: 'Glossar: Gewebe', href: 'Glossary.dc.html' },
+    ];
+    const L = (en, d) => (s.lang === 'de' ? d : en);
+    const opts = s.lang === 'de' ? optsDe : optsEn;
+    const picked = opts.find((o) => o.id === s.choice) || opts[0];
+    const right = picked.id === 'a';
+    const done = s.submitted && !!s.choice;
+    return { ...this.chrome(), picked, status: done ? L('Answer checked', 'Antwort geprüft') : (s.choice ? L('Chosen: ', 'Gewählt: ') + picked.text : L('No answer chosen yet', 'Noch keine Antwort gewählt')),
+      nextLine: done ? L('Next: Certification prep', 'Weiter: Prüfungsvorbereitung') : L('Next: Your feedback', 'Weiter: Ihre Rückmeldung'), checked: done, notChecked: !done,
+      options: opts.map((o) => ({ text: o.text, cls: s.choice === o.id ? 'rc on' : 'rc', on: s.choice === o.id, chk: s.choice === o.id ? 'inline-flex' : 'none', sel: s.choice === o.id ? L('Selected', 'Ausgewählt') : L('Select this answer', 'Diese Antwort wählen'),
+        pick: () => this.setState({ choice: o.id, error: false, submitted: false }) })),
+      submit: () => { if (!s.choice) this.setState({ error: true }); else { this.markDone('practice'); this.setState({ submitted: true }); setTimeout(() => { try { const f = document.getElementById('fb'); if (f) f.scrollIntoView({ behavior: (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ? 'auto' : 'smooth', block: 'center' }); } catch (e) {} }, 80); } },
+      showError: s.error, submitted: s.submitted && !!s.choice, hint: s.hint, hintLabel: s.hint ? L('Hide hint', 'Hinweis ausblenden') : L('Need a hint?', 'Brauchen Sie einen Hinweis?'), toggleHint: () => this.setState({ hint: !s.hint }),
+      verdict: right ? L('Correct', 'Richtig') : L('Keep going', 'Weiter so'), headline: right ? L('That’s right', 'Das stimmt') : L('Not quite, and that’s useful', 'Nicht ganz – und das ist nützlich'),
+      reviewHead: right ? L('Go a little deeper', 'Etwas tiefer gehen') : L('Suggested review', 'Empfohlene Wiederholung'), reviewSub: right ? L('Now see how the axilla fits with lymph nodes.', 'Sehen Sie nun, wie die Axilla zu den Lymphknoten passt.') : L('A short read will clear this up.', 'Ein kurzer Text bringt Klarheit.') };
+  }
+}
+</script>
+</body>
+</html>

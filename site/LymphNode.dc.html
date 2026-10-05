@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glossary entry: lymph node</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="stylesheet" href="fonts/inter.css">
+<style>
+html{scrollbar-gutter:stable}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#181818;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,dl,dd,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,textarea{font-family:inherit;font-size:inherit}
+a{color:#181818}
+.shell{background:#F1F7FC;min-height:100%}
+.muted{color:#595959}
+.h1{font-size:2.5em;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.h2{font-size:1.5em;line-height:1.3;font-weight:700}
+.h3{font-size:1.2em;line-height:1.35;font-weight:700}
+.sm{font-size:.9em}
+.b{font-weight:600}
+.side{background:#fff;border-right:1px solid #D5D5D5}
+.nav a{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border-radius:14px;text-decoration:none;color:#181818}
+.nav a:hover{background:#F1F7FC}
+.nav a[aria-current]{background:#F1F7FC}
+.dot{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid #6B6B6B;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.85em;background:#fff;box-sizing:border-box}
+.nav a[aria-current] .dot{background:#181818;color:#fff;border-color:#181818}
+.top{background:#fff;border-bottom:1px solid #D5D5D5}
+.tbtn{flex:none;white-space:nowrap;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid #6B6B6B;border-radius:10px;background:#fff;color:#181818;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;box-sizing:border-box}
+.tbtn:hover{border-color:#181818}
+.tbtn[aria-pressed=true]{background:#181818;color:#fff;border-color:#181818}
+.tbtn.dark{background:#181818;color:#fff;border-color:#181818}
+.card{background:#fff;border:1px solid #D5D5D5;border-radius:24px;padding:28px 32px}
+.pill{display:inline-block;padding:2px 12px;border-radius:20px;background:#EFEFEF;font-size:.8em;font-weight:600}
+.rc{display:flex;flex-direction:column;gap:12px;width:100%;box-sizing:border-box;padding:20px;border:1.5px solid #6B6B6B;border-radius:14px;background:#fff;color:#181818;text-align:left;cursor:pointer}
+.rc:hover{border-color:#181818}
+.rc.on{border:2px solid #181818;padding:19.5px;background:#F1F7FC}
+.rc[disabled]{cursor:not-allowed;background:#F7F7F7;border-style:dashed;color:#595959}
+.ico{flex:none;width:44px;height:44px;border-radius:50%;background:#F1F7FC;display:flex;align-items:center;justify-content:center}
+.rc.on .ico{background:#fff}
+.radio{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid #595959;box-sizing:border-box;background:#fff}
+.on .radio,.radio.on{border:2px solid #181818;background:radial-gradient(circle,#181818 0 6px,#fff 7px)}
+.opt{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:1.5px solid #6B6B6B;border-radius:10px;background:#fff;color:#181818;font-weight:600;cursor:pointer}
+.opt:hover{border-color:#181818}
+.opt.on{background:#181818;border-color:#181818;color:#fff}
+.selbtn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 4px;background:none;border:0;color:#181818;font-weight:600;cursor:pointer}
+.bar{background:#fff;border:1px solid #D5D5D5;border-radius:20px;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 28px;border-radius:10px;border:2px solid #6B6B6B;background:#fff;color:#181818;font-weight:600;text-decoration:none;cursor:pointer;box-sizing:border-box}
+.back:hover{border-color:#181818}
+.back.off{border-style:dashed;color:#6B6B6B;cursor:default}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;min-width:164px;padding:0 28px;border-radius:12px;background:#181818;color:#fff;font-weight:600;font-size:1.1em;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
+.go:hover{background:#000}
+.go.off{background:#D5D5D5;color:#595959;cursor:not-allowed}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:10px;background:#181818;color:#fff;font-weight:600;text-decoration:none;border:1.5px solid #181818;cursor:pointer}
+.btn.line{background:#fff;color:#181818;border-color:#6B6B6B}
+.btn.line:hover{border-color:#181818}
+.tint{background:#F1F7FC;border:1px solid #D5D5D5;border-radius:14px;padding:20px 24px}
+.term{font:inherit;font-weight:600;color:#181818;background:#DCEBFA;border:0;border-bottom:2px solid #181818;padding:0 5px;border-radius:5px 5px 0 0;cursor:pointer}
+.term:hover,.term.on{background:#181818;color:#fff}
+.tbtn,.btn,.back,.go,.opt,.selbtn{justify-content:center;text-align:center}
+.skip{position:absolute;left:-9999px;top:8px}
+.skip:focus{left:12px;z-index:50;padding:12px 18px;border-radius:10px;background:#181818;color:#fff;font-weight:600;text-decoration:none}
+input::placeholder,textarea::placeholder{color:#595959;opacity:1}
+:focus-visible{outline:3px solid #181818;outline-offset:3px;box-shadow:0 0 0 6px #fff}
+/* ===== COLOURS FROM THE REGISTRATION DESIGN — LIGHT MODE =====
+   page #FFFFFF · text #000000 · secondary #333333 · borders #000000 (1px frames, 2px cards, 3px selected)
+   accent #1D4ED8 · focus ring #2563EB · disabled #6B6B6B dashed · selected = black fill, white text */
+body{color:#000}
+a{color:#000}
+.shell{background:#fff}
+.muted{color:#333}
+.side{background:#fff;border-right:1px solid #000}
+.nav a{color:#000}
+.nav a:hover{background:transparent}
+.nav a[aria-current]{background:#000;color:#fff}
+.nav a[aria-current] .muted{color:#ccc}
+.dot{border:1px solid #000;background:#fff;color:#000}
+.nav a[aria-current] .dot{background:#fff;color:#000;border-color:#fff}
+.top{background:#fff;border-bottom:1px solid #000}
+.tbtn{border:1px solid #000;background:#fff;color:#000}
+.tbtn:hover{border-color:#000}
+.tbtn[aria-pressed=true]{background:#000;color:#fff;border-color:#000}
+.card{background:#fff;border:1px solid #000}
+.pill{background:#fff;border:1px solid #000;color:#000}
+.rc{border:2px solid #000;background:#fff;color:#000}
+.rc:hover{border-color:#000}
+.rc.on{border:3px solid #000;padding:19px;background:#000;color:#fff}
+.rc.on .muted{color:#ccc}
+.rc.on .dot{background:#fff;color:#000;border-color:#fff}
+.rc.off,.rc[disabled]{background:#fff;border:2px dashed #6B6B6B;color:#6B6B6B;padding:20px}
+.rc.off .muted{color:#6B6B6B}
+.ico{background:#fff;border:2px solid #000}
+.rc.on .ico{background:#fff;border-color:#fff}
+.radio{border:2px solid #000;background:#fff}
+.on .radio,.radio.on{border:2px solid #fff;background:radial-gradient(circle,#fff 0 6px,#000 7px)}
+a.rc:hover .radio,a.rc:focus-visible .radio{border:2px solid #000;background:radial-gradient(circle,#000 0 6px,#fff 7px)}
+.opt{border:2px solid #000;background:#fff;color:#000}
+.opt:hover{border-color:#000}
+.opt.on{background:#000;border-color:#000;color:#fff}
+.selbtn{color:inherit}
+.selbtn[disabled]{color:#6B6B6B}
+.bar{background:#fff;border:1px solid #000}
+.back{border:2px solid #000;background:#fff;color:#000}
+.back:hover{border-color:#000}
+.back.off{border-style:dashed;border-color:#6B6B6B;color:#6B6B6B}
+.go{background:#1D4ED8;color:#fff;border:2px solid #1D4ED8}
+.go:hover{background:#1D4ED8}
+.go.off{background:#fff;border:2px dashed #6B6B6B;color:#6B6B6B}
+.btn{background:#1D4ED8;color:#fff;border:2px solid #1D4ED8}
+.btn.line{background:#fff;color:#000;border:2px solid #000}
+.btn.line:hover{border-color:#000}
+.tint{background:#fff;border:1px solid #000;color:#000}
+.term{color:#000;background:#fff;border-bottom:2px solid #1D4ED8}
+.term:hover{background:#1D4ED8;color:#fff}
+.term.on{background:#000;color:#fff;border-bottom-color:#000}
+.skip:focus{background:#1D4ED8;color:#fff}
+input::placeholder,textarea::placeholder{color:#333}
+:focus-visible{outline:3px solid #2563EB;outline-offset:3px;box-shadow:none}
+.ptrack{background:#fff !important;border:2px solid #000;box-sizing:border-box;border-radius:999px !important;overflow:hidden}
+.pfill{background:#1D4ED8 !important;height:100% !important;border-radius:0 !important}
+.logo{background:#fff !important;border:2px solid #000;box-sizing:border-box}
+.logo svg{stroke:#000}
+.sidep{border-top:1px solid #000 !important}
+.rc.off .radio{border-color:#6B6B6B}
+.rc.on svg[stroke="#000000"]{stroke:#fff}
+.rc.on .ico svg[stroke="#000000"]{stroke:#000}
+/* ===== COLOURS FROM THE REGISTRATION DESIGN — DARK MODE (the contrast button) =====
+   page #000000 · text #FFFFFF · secondary #CCCCCC · borders #FFFFFF · accent #2563EB
+   focus ring #2563EB · disabled #9A9A9A dashed · selected = white fill, black text */
+.shell.hc{background:#000;color:#fff}
+.hc a{color:#fff}
+.hc .muted{color:#ccc}
+.hc .side,.hc .top,.hc .card,.hc .bar{background:#000;border-color:#fff;color:#fff}
+.hc .nav a{color:#fff}
+.hc .nav a[aria-current]{background:#fff;color:#000}
+.hc .nav a[aria-current] .muted{color:#333}
+.hc .dot{background:#000;color:#fff;border-color:#fff}
+.hc .nav a[aria-current] .dot{background:#000;color:#fff;border-color:#000}
+.hc .tbtn{background:#000;color:#fff;border-color:#fff}
+.hc .tbtn:hover{border-color:#fff}
+.hc .tbtn[aria-pressed=true]{background:#fff;color:#000;border-color:#fff}
+.hc .pill{background:#000;color:#fff;border-color:#fff}
+.hc .rc{background:#000;color:#fff;border-color:#fff}
+.hc .rc:hover{border-color:#fff}
+.hc .rc.on{background:#fff;color:#000;border-color:#fff}
+.hc .rc.on .muted{color:#333}
+.hc .rc.on .dot{background:#000;color:#fff;border-color:#000}
+.hc .rc.off,.hc .rc[disabled]{background:#000;border-color:#9A9A9A;color:#9A9A9A}
+.hc .rc.off .muted{color:#9A9A9A}
+.hc .rc.off .radio{border-color:#9A9A9A}
+.hc .ico{background:#000;border-color:#fff}
+.hc .rc.on .ico{background:#fff;border-color:#000}
+.hc .radio{background:#000;border-color:#fff}
+.hc .on .radio,.hc .radio.on{border:2px solid #000;background:radial-gradient(circle,#000 0 6px,#fff 7px)}
+.hc a.rc:hover .radio,.hc a.rc:focus-visible .radio{border:2px solid #fff;background:radial-gradient(circle,#fff 0 6px,#000 7px)}
+.hc .opt{background:#000;color:#fff;border-color:#fff}
+.hc .opt:hover{border-color:#fff}
+.hc .opt.on{background:#fff;color:#000;border-color:#fff}
+.hc .selbtn{color:inherit}
+.hc .selbtn[disabled]{color:#9A9A9A}
+.hc .back{background:#000;color:#fff;border-color:#fff}
+.hc .back:hover{border-color:#fff}
+.hc .back.off{border-color:#9A9A9A;color:#9A9A9A}
+.hc .go{background:#2563EB;border-color:#2563EB;color:#fff}
+.hc .go:hover{background:#2563EB}
+.hc .go.off{background:#000;border:2px dashed #9A9A9A;color:#9A9A9A}
+.hc .btn{background:#2563EB;border-color:#2563EB;color:#fff}
+.hc .btn.line{background:#000;color:#fff;border-color:#fff}
+.hc .btn.line:hover{border-color:#fff}
+.hc .tint{background:#000;border-color:#fff;color:#fff}
+.hc .term{background:#000;color:#fff;border-bottom-color:#2563EB}
+.hc .term:hover{background:#2563EB;color:#fff}
+.hc .term.on{background:#fff;color:#000;border-bottom-color:#fff}
+.hc .skip:focus{background:#2563EB;color:#fff}
+.hc strong{color:inherit !important}
+.hc input,.hc textarea{background:#000 !important;color:#fff !important;border-color:#fff !important}
+.hc input::placeholder,.hc textarea::placeholder{color:#ccc}
+.hc [role=alert]{color:#FF9A9A !important}
+.hc .ptrack{background:#000 !important;border-color:#fff}
+.hc .pfill{background:#2563EB !important}
+.hc .logo{background:#000 !important;border-color:#fff}
+.hc .logo svg{stroke:#fff}
+.hc .sidep{border-top-color:#fff !important}
+.hc svg[stroke="#000000"]{stroke:#fff}
+.hc .rc.on svg[stroke="#000000"]{stroke:#000}
+.hc .rc.on .ico svg[stroke="#000000"]{stroke:#000}
+.hc audio{color-scheme:dark}
+.hc :focus-visible{outline:3px solid #2563EB;outline-offset:3px;box-shadow:none}
+/* ===== RESPONSIVE / REFLOW (WCAG 1.4.10): no sideways scrolling down to 320px ===== */
+h1,h2,h3,.h1,.h2,.h3,.b,p,.muted,label,li,dd,dt,a,button{overflow-wrap:anywhere}
+.nav a{min-height:44px;box-sizing:border-box}
+@media (max-width: 900px){
+  div.shell{grid-template-columns:minmax(0,1fr) !important;min-height:0 !important}
+  .side{border-right:0 !important;border-bottom:1px solid #000;padding:16px !important}
+  .hc .side{border-bottom-color:#fff}
+  .nav ul{flex-direction:row !important;flex-wrap:wrap;gap:6px !important}
+  .nav a{padding:8px 12px;align-items:center}
+  .nav a > span:last-child > span:nth-child(n+2){display:none}
+  .top{height:auto !important;padding:12px 16px !important;flex-wrap:wrap !important}
+  .top > div{flex:1 1 100% !important;flex-wrap:wrap !important;justify-content:flex-start !important;min-width:0}
+  main{padding:16px !important;gap:24px !important}
+  .card{padding:20px !important}
+  [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr) !important}
+  .bar{flex-wrap:wrap}
+  .bar > div{flex-wrap:wrap;width:100%;justify-content:space-between}
+  .go{min-width:0 !important}
+  .h1{font-size:2em !important}
+  aside[aria-label]{position:static !important}
+}
+@media (max-width: 480px){
+  .back,.go,.btn{width:100%;box-sizing:border-box}
+  .bar > div{gap:12px !important}
+  .rc > *,.rc span{min-width:0}
+  .rc [style*="space-between"]{flex-wrap:wrap;gap:8px}
+  .bar > div > div{text-align:left !important;width:100%}
+}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</helmet>
+<sc-if value="{{isEn}}" hint-placeholder-val="{{ true }}">
+<div lang="en" class="{{hcCls}}" style="font-size:{{fs}};display:grid;grid-template-columns:372px minmax(0,1fr);min-height:2180px">
+<a class="skip" href="#main">Skip to main content</a>
+<div class="side" style="padding:24px 18px">
+<header><a href="Main.dc.html" aria-label="MTE Learning, Home" style="display:flex;gap:14px;align-items:center;text-decoration:none;padding:0 4px;min-height:44px"><span class="logo" style="width:40px;height:40px;border-radius:12px;background:#000000;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5h6a3 3 0 013 3V20a2.5 2.5 0 00-2.5-2.5H3zM21 5.5h-6a3 3 0 00-3 3V20a2.5 2.5 0 012.5-2.5H21z"/></svg></span><span><span class="b" style="display:block;font-size:1.15em;line-height:1.2">MTE Learning</span><span class="muted" style="display:block;font-size:.75em;font-weight:600;letter-spacing:.1em">TRAINING PORTAL</span></span></a></header>
+<p class="muted" style="margin:32px 4px 14px;font-size:.75em;font-weight:700;letter-spacing:.08em" aria-hidden="true">YOUR STUDY</p>
+<nav class="nav" aria-label="Main"><ul style="display:flex;flex-direction:column;gap:8px"><li><a href="Main.dc.html" aria-label="Home" aria-describedby="nd1"><span class="dot" aria-hidden="true">1</span><span><span class="b" style="display:block">Home</span><span id="nd1" class="muted sm" style="display:block">Choose what to do</span></span></a></li><li><a href="Glossary.dc.html" aria-current="page" aria-label="Glossary" aria-describedby="nd2"><span class="dot" aria-hidden="true">2</span><span><span class="b" style="display:block">Glossary</span><span id="nd2" class="muted sm" style="display:block">Look up a word</span><span class="sm" style="display:block;font-weight:700;font-size:.75em;letter-spacing:.04em;margin-top:6px" aria-hidden="true">CURRENT PAGE</span></span></a></li><li><a href="LymphModule.dc.html" aria-label="Learning modules" aria-describedby="nd3"><span class="dot" aria-hidden="true">3</span><span><span class="b" style="display:block">Learning modules</span><span id="nd3" class="muted sm" style="display:block">Short readings</span></span></a></li><li><a href="Procedure.dc.html" aria-label="Procedures" aria-describedby="nd4"><span class="dot" aria-hidden="true">4</span><span><span class="b" style="display:block">Procedures</span><span id="nd4" class="muted sm" style="display:block">Review the steps</span></span></a></li><li><a href="Practice.dc.html" aria-label="Practice" aria-describedby="nd5"><span class="dot" aria-hidden="true">5</span><span><span class="b" style="display:block">Practice</span><span id="nd5" class="muted sm" style="display:block">Check your understanding</span></span></a></li><li><a href="Certification.dc.html" aria-label="Certification prep" aria-describedby="nd6"><span class="dot" aria-hidden="true">6</span><span><span class="b" style="display:block">Certification prep</span><span id="nd6" class="muted sm" style="display:block">Choose what to study next</span></span></a></li><li><a href="Summary.dc.html" aria-label="Task summary" aria-describedby="nd7"><span class="dot" aria-hidden="true">7</span><span><span class="b" style="display:block">Task summary</span><span id="nd7" class="muted sm" style="display:block">See how it went</span></span></a></li></ul></nav>
+<div class="sidep" role="region" aria-labelledby="sp-lbl" style="margin:28px 4px 0;padding-top:20px;border-top:1px solid #D5D5D5"><p class="b sm" id="sp-lbl">Today’s progress</p><p class="muted sm">{{doneN}} of 5 done</p><div class="ptrack" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{doneN}}" aria-valuetext="{{doneN}} of 5 done" aria-labelledby="sp-lbl" style="margin-top:8px;height:10px;border-radius:10px;background:#D5D5D5"><div class="pfill" style="height:10px;border-radius:10px;background:#000000;width:{{pctW}}"></div></div></div>
+</div>
+<div style="display:flex;flex-direction:column;min-width:0">
+<div class="top" role="region" aria-label="Display and language settings" style="height:80px;box-sizing:border-box;padding:0 30px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:20px"><span class="sr" id="h-lang">Switches the whole page between English and German.</span><span class="sr" id="h-big">Makes all text larger. Press again to return to normal size.</span><span class="sr" id="h-hc">Switches to a black screen with white text. Press again to go back.</span>
+<div style="display:flex;flex-wrap:nowrap;gap:12px;flex:none;justify-content:flex-end">
+<button type="button" class="tbtn" onClick="{{toggleLang}}" aria-describedby="h-lang" aria-label="Language: English. Switch to Deutsch" lang="en"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h9M8.5 3v2M6 5c.5 3.5 3 6.5 6.500 8M12 5c-.5 3.500-3.500 6.500-8 8.500M13 20l4-9 4 9M14.500 17h5"/></svg>English</button>
+<button type="button" class="tbtn" aria-pressed="{{bigP}}" aria-describedby="h-big" onClick="{{toggleBig}}"><span aria-hidden="true" style="font-weight:700">aA</span>Text size</button>
+<button type="button" class="tbtn" aria-pressed="{{hcP}}" aria-describedby="h-hc" onClick="{{toggleHc}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.500"></circle></svg>High contrast</button>
+</div></div>
+<main id="main" tabindex="-1" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m" style="padding:30px;display:flex;flex-direction:column;gap:36px">
+<section class="card" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m">
+<p id="pt-e" style="font-size:.95em">Glossary entry</p>
+<h1 id="pt" class="h1" aria-describedby="pt-e pt-i pt-m" style="margin-top:6px">lymph node</h1>
+<p class="muted" id="pt-i" style="margin-top:12px;max-width:760px;font-size:1.05em">Read it, listen to it, then decide where to go next.</p><p class="b sm" id="pt-m" style="margin-top:20px;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>About 2 minutes</p>
+</section>
+<section class="card" aria-labelledby="l0">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 id="l0" class="b sm">Step 1 of 3 · Understand</h2><span class="pill">Required</span></div>
+<div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+<button type="button" class="btn" onClick="{{playNormal}}" aria-describedby="ln-h1" aria-label="Listen to how lymph node is pronounced"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zM17 8a5 5 0 010 8"></path></svg>Listen</button>
+<button type="button" class="btn line" onClick="{{playSlow}}" aria-describedby="ln-h2" aria-label="Listen to lymph node slowly">Slowly</button>
+<span class="sr" id="ln-h1">Plays the spoken word.</span><span class="sr" id="ln-h2">Plays the spoken word more slowly.</span><span role="status" class="sr">{{playMsg}}</span><span class="muted"><span class="sr">Pronunciation guide. </span>Sounds like <strong style="color:#000000">limf nohd</strong></span></div>
+<h3 id="l1" class="h2" style="margin-top:28px">In plain language</h3>
+<p style="margin-top:8px;max-width:720px;font-size:1.1em">A lymph node is a small, bean-shaped gland that works like a filter. A clear fluid called lymph flows through it, and the node catches germs and damaged cells so the body’s defence cells can deal with them. You have hundreds of lymph nodes, grouped in places such as the armpit, the neck and the groin.</p>
+<h3 class="h2" style="margin-top:28px">Why it matters</h3>
+<p style="margin-top:8px;max-width:720px;font-size:1.1em">In a breast examination you also check the lymph node areas close to the breast, especially the axilla (armpit). Knowing what a normal node feels like helps you describe anything different clearly and with confidence.</p>
+<div style="margin-top:24px"><span class="sr" id="ln-h3">Shows a simpler explanation below this button.</span><button type="button" class="btn line" aria-expanded="{{help}}" onClick="{{toggleHelp}}" aria-describedby="ln-h3">{{helpLabel}}</button></div>
+<sc-if value="{{help}}" hint-placeholder-val="{{ false }}"><div class="tint" style="margin-top:18px"><h3 class="h3">Let’s try it another way</h3>
+<p style="margin-top:6px;max-width:720px;font-size:1.1em">Think of a lymph node as a tiny checkpoint. Fluid from the body’s tissue passes through it, and the checkpoint stops anything that should not be there. Most nodes are too small to feel. When the body is fighting an infection, a node can swell and feel like a soft, movable pea.</p>
+<p class="muted" style="margin-top:10px">Still unclear? Follow the path below, one step at a time. You do not need to ask anyone first.</p></div></sc-if>
+</section>
+<section class="card" aria-labelledby="l2">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Step 2 of 3 · Keep going</p><span class="pill">Suggested</span></div>
+<h2 id="l2" class="h2" style="margin:14px 0 6px">Where to go next</h2>
+<p class="muted" style="margin-bottom:18px">A short path from this word to the skill. Start at the top.</p>
+<ul style="display:flex;flex-direction:column;gap:14px"><li><a class="rc on" aria-labelledby="lp1t" aria-describedby="lp1d lp1h" href="LymphModule.dc.html" style="text-decoration:none;flex-direction:row;align-items:center;gap:16px"><span class="ico w"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.500h6a3 3 0 013 3V20a2.500 2.500 0 00-2.500-2.500H3zM21 5.500h-6a3 3 0 00-3 3V20a2.500 2.500 0 012.500-2.500H21z"></path></svg></span><span style="flex:1"><span class="h3" id="lp1t" style="display:block">Lymph nodes module</span><span class="muted" id="lp1d" style="display:block">Start with what lymph nodes do, then where to find them.</span></span><span style="flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="sr" id="lp1h">Opens the Lymph nodes module.</span></a></li><li><a class="rc" aria-labelledby="lp2t" aria-describedby="lp2d lp2h" href="LymphModule.dc.html" style="text-decoration:none;flex-direction:row;align-items:center;gap:16px"><span class="ico w"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.500h6a3 3 0 013 3V20a2.500 2.500 0 00-2.500-2.500H3zM21 5.500h-6a3 3 0 00-3 3V20a2.500 2.500 0 012.500-2.500H21z"></path></svg></span><span style="flex:1"><span class="h3" id="lp2t" style="display:block">Axilla (armpit)</span><span class="muted" id="lp2d" style="display:block">The main lymph node area you will check.</span></span><span style="flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="sr" id="lp2h">Opens the Lymph nodes module, where the armpit is explained.</span></a></li><li><a class="rc" aria-labelledby="lp3t" aria-describedby="lp3d lp3h" href="Procedure.dc.html" style="text-decoration:none;flex-direction:row;align-items:center;gap:16px"><span class="ico w"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.500h6a3 3 0 013 3V20a2.500 2.500 0 00-2.500-2.500H3zM21 5.500h-6a3 3 0 00-3 3V20a2.500 2.500 0 012.500-2.500H21z"></path></svg></span><span style="flex:1"><span class="h3" id="lp3t" style="display:block">Breast examination: step 2</span><span class="muted" id="lp3d" style="display:block">See where checking the lymph node areas fits in the procedure.</span></span><span style="flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="sr" id="lp3h">Opens the breast examination steps.</span></a></li></ul></section>
+<section class="card" aria-labelledby="l3">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Step 3 of 3 · Check in</p><span class="pill">Optional</span></div>
+<h2 id="l3" class="h2" style="margin:14px 0 16px">Could you explain this in your own words now?</h2>
+<div role="group" aria-labelledby="l3" style="display:flex;gap:12px;flex-wrap:wrap">
+<sc-for list="{{explain}}" as="o" hint-placeholder-count="3"><button type="button" class="{{o.cls}}" aria-pressed="{{o.on}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div>
+<sc-if value="{{notYet}}" hint-placeholder-val="{{ false }}"><p role="status" class="muted" style="margin-top:14px">That is fine. Try “I still need help” above, or open the related module.</p></sc-if>
+<div class="tint" style="margin-top:28px;border-style:dashed"><h3 class="h3">Quick check (10 seconds)</h3>
+<div style="margin-top:16px">
+<div role="group" aria-labelledby="e1"><p id="e1" class="b">Was this easy to understand?</p><div style="margin-top:10px;display:flex;gap:12px"><button type="button" class="{{easyYes}}" onClick="{{setEasyYes}}">Yes</button><button type="button" class="{{easyNo}}" onClick="{{setEasyNo}}">No</button></div></div></div>
+<span class="sr" id="ln-h4">Optional. You can type here, or record a voice note with the button below.</span><label for="un" class="b" style="display:block;margin-top:20px">What felt unclear? <span class="muted" style="font-weight:400">(optional)</span></label>
+<textarea id="un" aria-describedby="ln-h4" rows="3" style="margin-top:8px;width:100%;box-sizing:border-box;padding:14px;border:2px solid #000000;border-radius:12px;background:#fff"></textarea>
+<div style="margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:14px"><span class="sr" id="ln-h5">Uses your microphone. Press again to stop recording.</span><span class="sr" id="ln-h6">Removes your voice note.</span><button type="button" class="btn line" onClick="{{toggleRec}}" aria-describedby="ln-h5"><sc-if value="{{recOff}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></sc-if><sc-if value="{{recOn}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg></sc-if>{{recLabel}}</button><span role="status" aria-live="polite" class="muted">{{recStatus}}</span></div>
+<sc-if value="{{hasClip}}" hint-placeholder-val="{{ false }}"><div style="margin-top:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap"><audio controls src="{{recUrl}}" aria-label="Your voice note"></audio><button type="button" class="btn line" onClick="{{delClip}}" aria-describedby="ln-h6">Delete recording</button></div></sc-if></div>
+</section>
+<div class="bar" role="navigation" aria-label="Page navigation"><span class="sr" id="ln-h7">Opens the Lymph nodes module.</span><a class="back" aria-label="Back to Glossary" href="Glossary.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Back</a>
+<div style="display:flex;align-items:center;gap:28px">
+<div style="text-align:right"><p class="b sm">lymph node</p><p class="muted sm">Next: Lymph nodes module</p></div><a class="go" href="LymphModule.dc.html" aria-describedby="ln-h7">Open module <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div>
+</main></div></div>
+</sc-if>
+<sc-if value="{{isDe}}" hint-placeholder-val="{{ false }}">
+<div lang="de" class="{{hcCls}}" style="font-size:{{fs}};display:grid;grid-template-columns:372px minmax(0,1fr);min-height:2180px">
+<a class="skip" href="#main">Zum Hauptinhalt springen</a>
+<div class="side" style="padding:24px 18px">
+<header><a href="Main.dc.html" aria-label="MTE Learning, Start" style="display:flex;gap:14px;align-items:center;text-decoration:none;padding:0 4px;min-height:44px"><span class="logo" style="width:40px;height:40px;border-radius:12px;background:#000000;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5h6a3 3 0 013 3V20a2.5 2.5 0 00-2.5-2.5H3zM21 5.5h-6a3 3 0 00-3 3V20a2.5 2.5 0 012.5-2.5H21z"/></svg></span><span><span class="b" style="display:block;font-size:1.15em;line-height:1.2">MTE Learning</span><span class="muted" style="display:block;font-size:.75em;font-weight:600;letter-spacing:.1em">LERNPORTAL</span></span></a></header>
+<p class="muted" style="margin:32px 4px 14px;font-size:.75em;font-weight:700;letter-spacing:.08em" aria-hidden="true">IHR LERNWEG</p>
+<nav class="nav" aria-label="Hauptnavigation"><ul style="display:flex;flex-direction:column;gap:8px"><li><a href="Main.dc.html" aria-label="Start" aria-describedby="nd1"><span class="dot" aria-hidden="true">1</span><span><span class="b" style="display:block">Start</span><span id="nd1" class="muted sm" style="display:block">Aufgabe wählen</span></span></a></li><li><a href="Glossary.dc.html" aria-current="page" aria-label="Glossar" aria-describedby="nd2"><span class="dot" aria-hidden="true">2</span><span><span class="b" style="display:block">Glossar</span><span id="nd2" class="muted sm" style="display:block">Begriff nachschlagen</span><span class="sm" style="display:block;font-weight:700;font-size:.75em;letter-spacing:.04em;margin-top:6px" aria-hidden="true">AKTUELLE SEITE</span></span></a></li><li><a href="LymphModule.dc.html" aria-label="Lernmodule" aria-describedby="nd3"><span class="dot" aria-hidden="true">3</span><span><span class="b" style="display:block">Lernmodule</span><span id="nd3" class="muted sm" style="display:block">Kurze Texte</span></span></a></li><li><a href="Procedure.dc.html" aria-label="Untersuchungsablauf" aria-describedby="nd4"><span class="dot" aria-hidden="true">4</span><span><span class="b" style="display:block">Untersuchungsablauf</span><span id="nd4" class="muted sm" style="display:block">Schritte ansehen</span></span></a></li><li><a href="Practice.dc.html" aria-label="Übung" aria-describedby="nd5"><span class="dot" aria-hidden="true">5</span><span><span class="b" style="display:block">Übung</span><span id="nd5" class="muted sm" style="display:block">Verständnis prüfen</span></span></a></li><li><a href="Certification.dc.html" aria-label="Prüfungsvorbereitung" aria-describedby="nd6"><span class="dot" aria-hidden="true">6</span><span><span class="b" style="display:block">Prüfungsvorbereitung</span><span id="nd6" class="muted sm" style="display:block">Nächstes Thema wählen</span></span></a></li><li><a href="Summary.dc.html" aria-label="Aufgabenübersicht" aria-describedby="nd7"><span class="dot" aria-hidden="true">7</span><span><span class="b" style="display:block">Aufgabenübersicht</span><span id="nd7" class="muted sm" style="display:block">Ergebnis ansehen</span></span></a></li></ul></nav>
+<div class="sidep" role="region" aria-labelledby="sp-lbl" style="margin:28px 4px 0;padding-top:20px;border-top:1px solid #D5D5D5"><p class="b sm" id="sp-lbl">Heutiger Fortschritt</p><p class="muted sm">{{doneN}} von 5 erledigt</p><div class="ptrack" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{doneN}}" aria-valuetext="{{doneN}} von 5 erledigt" aria-labelledby="sp-lbl" style="margin-top:8px;height:10px;border-radius:10px;background:#D5D5D5"><div class="pfill" style="height:10px;border-radius:10px;background:#000000;width:{{pctW}}"></div></div></div>
+</div>
+<div style="display:flex;flex-direction:column;min-width:0">
+<div class="top" role="region" aria-label="Anzeige- und Spracheinstellungen" style="height:80px;box-sizing:border-box;padding:0 30px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:20px"><span class="sr" id="h-lang">Wechselt die ganze Seite zwischen Englisch und Deutsch.</span><span class="sr" id="h-big">Macht die ganze Schrift größer. Erneut drücken für die normale Größe.</span><span class="sr" id="h-hc">Wechselt zu einem schwarzen Bildschirm mit weißer Schrift. Erneut drücken, um zurückzukehren.</span>
+<div style="display:flex;flex-wrap:nowrap;gap:12px;flex:none;justify-content:flex-end">
+<button type="button" class="tbtn" onClick="{{toggleLang}}" aria-describedby="h-lang" aria-label="Sprache: Deutsch. Wechseln zu English" lang="de"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h9M8.5 3v2M6 5c.5 3.5 3 6.5 6.500 8M12 5c-.5 3.500-3.500 6.500-8 8.500M13 20l4-9 4 9M14.500 17h5"/></svg>Deutsch</button>
+<button type="button" class="tbtn" aria-pressed="{{bigP}}" aria-describedby="h-big" onClick="{{toggleBig}}"><span aria-hidden="true" style="font-weight:700">aA</span>Schriftgröße</button>
+<button type="button" class="tbtn" aria-pressed="{{hcP}}" aria-describedby="h-hc" onClick="{{toggleHc}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.500"></circle></svg>Hoher Kontrast</button>
+</div></div>
+<main id="main" tabindex="-1" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m" style="padding:30px;display:flex;flex-direction:column;gap:36px">
+<section class="card" aria-labelledby="pt" aria-describedby="pt-e pt-i pt-m">
+<p id="pt-e" style="font-size:.95em">Glossareintrag</p>
+<h1 id="pt" class="h1" aria-describedby="pt-e pt-i pt-m" style="margin-top:6px">Lymphknoten</h1>
+<p class="muted" id="pt-i" style="margin-top:12px;max-width:760px;font-size:1.05em">Lesen Sie es, hören Sie es an und entscheiden Sie dann, wie es weitergeht.</p><p class="b sm" id="pt-m" style="margin-top:20px;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Etwa 2 Minuten</p>
+</section>
+<section class="card" aria-labelledby="l0">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 id="l0" class="b sm">Schritt 1 von 3 · Verstehen</h2><span class="pill">Erforderlich</span></div>
+<div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+<button type="button" class="btn" onClick="{{playNormal}}" aria-describedby="ln-h1" aria-label="Anhören, wie Lymphknoten ausgesprochen wird"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zM17 8a5 5 0 010 8"></path></svg>Anhören</button>
+<button type="button" class="btn line" onClick="{{playSlow}}" aria-describedby="ln-h2" aria-label="Lymphknoten langsam anhören">Langsam</button>
+<span class="sr" id="ln-h1">Spielt das gesprochene Wort ab.</span><span class="sr" id="ln-h2">Spielt das gesprochene Wort langsamer ab.</span><span role="status" class="sr">{{playMsg}}</span><span class="muted"><span class="sr">Ausspracheangabe. </span>Klingt wie <strong style="color:#000000">lümf-knoh-ten</strong></span></div>
+<h3 id="l1" class="h2" style="margin-top:28px">In einfachen Worten</h3>
+<p style="margin-top:8px;max-width:720px;font-size:1.1em">Ein Lymphknoten ist eine kleine, bohnenförmige Drüse, die wie ein Filter arbeitet. Eine klare Flüssigkeit, die Lymphe, fließt hindurch, und der Knoten fängt Keime und geschädigte Zellen auf, damit die Abwehrzellen des Körpers sie unschädlich machen können. Sie haben Hunderte von Lymphknoten, gruppiert zum Beispiel in der Achselhöhle, am Hals und in der Leiste.</p>
+<h3 class="h2" style="margin-top:28px">Warum das wichtig ist</h3>
+<p style="margin-top:8px;max-width:720px;font-size:1.1em">Bei einer Brustuntersuchung prüfen Sie auch die Lymphknotenregionen nahe der Brust, besonders die Axilla (Achselhöhle). Wenn Sie wissen, wie sich ein normaler Knoten anfühlt, können Sie Auffälligkeiten klar und sicher beschreiben.</p>
+<div style="margin-top:24px"><span class="sr" id="ln-h3">Zeigt unterhalb dieser Schaltfläche eine einfachere Erklärung.</span><button type="button" class="btn line" aria-expanded="{{help}}" onClick="{{toggleHelp}}" aria-describedby="ln-h3">{{helpLabel}}</button></div>
+<sc-if value="{{help}}" hint-placeholder-val="{{ false }}"><div class="tint" style="margin-top:18px"><h3 class="h3">Versuchen wir es anders</h3>
+<p style="margin-top:6px;max-width:720px;font-size:1.1em">Stellen Sie sich einen Lymphknoten als winzige Kontrollstelle vor. Flüssigkeit aus dem Körpergewebe fließt hindurch, und die Kontrollstelle hält alles auf, was dort nicht hingehört. Die meisten Knoten sind zu klein, um sie zu spüren. Kämpft der Körper gegen eine Infektion, kann ein Knoten anschwellen und sich wie eine weiche, bewegliche Erbse anfühlen.</p>
+<p class="muted" style="margin-top:10px">Noch unklar? Folgen Sie dem Weg unten, Schritt für Schritt. Sie müssen niemanden vorher fragen.</p></div></sc-if>
+</section>
+<section class="card" aria-labelledby="l2">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Schritt 2 von 3 · Weitermachen</p><span class="pill">Empfohlen</span></div>
+<h2 id="l2" class="h2" style="margin:14px 0 6px">Wie es weitergeht</h2>
+<p class="muted" style="margin-bottom:18px">Ein kurzer Weg von diesem Wort zur Fertigkeit. Beginnen Sie oben.</p>
+<ul style="display:flex;flex-direction:column;gap:14px"><li><a class="rc on" aria-labelledby="lp1t" aria-describedby="lp1d lp1h" href="LymphModule.dc.html" style="text-decoration:none;flex-direction:row;align-items:center;gap:16px"><span class="ico w"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.500h6a3 3 0 013 3V20a2.500 2.500 0 00-2.500-2.500H3zM21 5.500h-6a3 3 0 00-3 3V20a2.500 2.500 0 012.500-2.500H21z"></path></svg></span><span style="flex:1"><span class="h3" id="lp1t" style="display:block">Modul Lymphknoten</span><span class="muted" id="lp1d" style="display:block">Beginnen Sie damit, was Lymphknoten tun, und dann, wo man sie findet.</span></span><span style="flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="sr" id="lp1h">Öffnet das Modul Lymphknoten.</span></a></li><li><a class="rc" aria-labelledby="lp2t" aria-describedby="lp2d lp2h" href="LymphModule.dc.html" style="text-decoration:none;flex-direction:row;align-items:center;gap:16px"><span class="ico w"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.500h6a3 3 0 013 3V20a2.500 2.500 0 00-2.500-2.500H3zM21 5.500h-6a3 3 0 00-3 3V20a2.500 2.500 0 012.500-2.500H21z"></path></svg></span><span style="flex:1"><span class="h3" id="lp2t" style="display:block">Axilla (Achselhöhle)</span><span class="muted" id="lp2d" style="display:block">Die wichtigste Lymphknotenregion, die Sie prüfen.</span></span><span style="flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="sr" id="lp2h">Öffnet das Modul Lymphknoten, in dem die Achselhöhle erklärt wird.</span></a></li><li><a class="rc" aria-labelledby="lp3t" aria-describedby="lp3d lp3h" href="Procedure.dc.html" style="text-decoration:none;flex-direction:row;align-items:center;gap:16px"><span class="ico w"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.500h6a3 3 0 013 3V20a2.500 2.500 0 00-2.500-2.500H3zM21 5.500h-6a3 3 0 00-3 3V20a2.500 2.500 0 012.500-2.500H21z"></path></svg></span><span style="flex:1"><span class="h3" id="lp3t" style="display:block">Brustuntersuchung: Schritt 2</span><span class="muted" id="lp3d" style="display:block">Sehen Sie, wo die Prüfung der Lymphknotenregionen im Ablauf steht.</span></span><span style="flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="sr" id="lp3h">Öffnet die Schritte der Brustuntersuchung.</span></a></li></ul></section>
+<section class="card" aria-labelledby="l3">
+<div style="display:flex;justify-content:space-between;align-items:center"><p class="b sm">Schritt 3 von 3 · Kurzer Check</p><span class="pill">Optional</span></div>
+<h2 id="l3" class="h2" style="margin:14px 0 16px">Könnten Sie das jetzt mit eigenen Worten erklären?</h2>
+<div role="group" aria-labelledby="l3" style="display:flex;gap:12px;flex-wrap:wrap">
+<sc-for list="{{explain}}" as="o" hint-placeholder-count="3"><button type="button" class="{{o.cls}}" aria-pressed="{{o.on}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div>
+<sc-if value="{{notYet}}" hint-placeholder-val="{{ false }}"><p role="status" class="muted" style="margin-top:14px">Das ist in Ordnung. Versuchen Sie oben „Ich brauche noch Hilfe“ oder öffnen Sie das passende Modul.</p></sc-if>
+<div class="tint" style="margin-top:28px;border-style:dashed"><h3 class="h3">Kurzer Check (10 Sekunden)</h3>
+<div style="margin-top:16px">
+<div role="group" aria-labelledby="e1"><p id="e1" class="b">War das leicht verständlich?</p><div style="margin-top:10px;display:flex;gap:12px"><button type="button" class="{{easyYes}}" onClick="{{setEasyYes}}">Ja</button><button type="button" class="{{easyNo}}" onClick="{{setEasyNo}}">Nein</button></div></div></div>
+<span class="sr" id="ln-h4">Optional. Sie können hier tippen oder mit der Schaltfläche darunter eine Sprachnotiz aufnehmen.</span><label for="un" class="b" style="display:block;margin-top:20px">Was war unklar? <span class="muted" style="font-weight:400">(optional)</span></label>
+<textarea id="un" aria-describedby="ln-h4" rows="3" style="margin-top:8px;width:100%;box-sizing:border-box;padding:14px;border:2px solid #000000;border-radius:12px;background:#fff"></textarea>
+<div style="margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:14px"><span class="sr" id="ln-h5">Verwendet Ihr Mikrofon. Erneut drücken, um die Aufnahme zu beenden.</span><span class="sr" id="ln-h6">Entfernt Ihre Sprachnotiz.</span><button type="button" class="btn line" onClick="{{toggleRec}}" aria-describedby="ln-h5"><sc-if value="{{recOff}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></sc-if><sc-if value="{{recOn}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg></sc-if>{{recLabel}}</button><span role="status" aria-live="polite" class="muted">{{recStatus}}</span></div>
+<sc-if value="{{hasClip}}" hint-placeholder-val="{{ false }}"><div style="margin-top:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap"><audio controls src="{{recUrl}}" aria-label="Ihre Sprachnotiz"></audio><button type="button" class="btn line" onClick="{{delClip}}" aria-describedby="ln-h6">Aufnahme löschen</button></div></sc-if></div>
+</section>
+<div class="bar" role="navigation" aria-label="Seitennavigation"><span class="sr" id="ln-h7">Öffnet das Modul Lymphknoten.</span><a class="back" aria-label="Zurück zu Glossar" href="Glossary.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Zurück</a>
+<div style="display:flex;align-items:center;gap:28px">
+<div style="text-align:right"><p class="b sm">Lymphknoten</p><p class="muted sm">Weiter: Modul Lymphknoten</p></div><a class="go" href="LymphModule.dc.html" aria-describedby="ln-h7">Modul öffnen <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div>
+</main></div></div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2180}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); const a = this.loadA11y() || {}; this.state = { big: !!a.big, hc: !!a.hc, lang: a.lang === 'de' ? 'de' : 'en', done: Array.isArray(a.done) ? a.done : [], reminder: a.reminder || null, help: false, ex: null, easy: null, rec: 'idle', secs: 0, recUrl: '', playMsg: '' }; }
+
+  chrome() {
+    const s = this.state;
+    return {
+      fs: s.big ? '19px' : '16px',
+      hcCls: s.hc ? 'shell hc' : 'shell',
+      bigP: s.big, hcP: s.hc,
+      doneN: (s.done || []).length, pctW: ((s.done || []).length / 5 * 100) + '%',
+      hasRem: !!s.reminder, remTime: s.reminder ? s.reminder.time : '',
+      clearRem: () => { this.saveA11y({ reminder: null }); this.setState({ reminder: null }); },
+      isEn: s.lang !== 'de', isDe: s.lang === 'de', enP: s.lang !== 'de', deP: s.lang === 'de',
+      toggleLang: () => { const l = s.lang === 'de' ? 'en' : 'de'; this.saveA11y({ lang: l }); this.setState({ lang: l }); },
+      setEn: () => { this.saveA11y({ lang: 'en' }); this.setState({ lang: 'en' }); },
+      setDe: () => { this.saveA11y({ lang: 'de' }); this.setState({ lang: 'de' }); },
+      toggleBig: () => { this.saveA11y({ big: !s.big }); this.setState({ big: !s.big }); },
+      toggleHc: () => { this.saveA11y({ hc: !s.hc }); this.setState({ hc: !s.hc }); },
+    };
+  }
+  loadA11y() {
+    let raw = null;
+    try { raw = localStorage.getItem('mte-a11y'); } catch (e) {}
+    if (!raw) { try { const m = document.cookie.match(/(?:^|; )mte-a11y=([^;]*)/); if (m) raw = decodeURIComponent(m[1]); } catch (e) {} }
+    if (!raw) { try { const m = (window.name || '').match(/mte-a11y=(\{[^}]*\})/); if (m) raw = m[1]; } catch (e) {} }
+    if (!raw) return null;
+    try { const v = JSON.parse(raw); const fresh = v.ts && (Date.now() - v.ts) < 3 * 3600 * 1000; /* a new session starts after 3 hours away */
+      return { big: !!v.big, hc: !!v.hc, lang: v.lang === 'de' ? 'de' : 'en', done: fresh && Array.isArray(v.done) ? v.done : [], reminder: v.reminder && v.reminder.day === new Date().toDateString() ? v.reminder : null }; } catch (e) { return null; }
+  }
+  saveA11y(p) {
+    const v = JSON.stringify({ big: this.state.big, hc: this.state.hc, lang: this.state.lang, done: this.state.done, reminder: this.state.reminder, ts: Date.now(), ...p });
+    try { localStorage.setItem('mte-a11y', v); } catch (e) {}
+    try { document.cookie = 'mte-a11y=' + encodeURIComponent(v) + ';path=/;max-age=31536000;SameSite=Lax'; } catch (e) {}
+    try { window.name = 'mte-a11y=' + v; } catch (e) {}
+  }
+  onMount() { try { window.speechSynthesis.getVoices(); } catch (e) {} this.markDone('lookup'); }
+  toggleRec() {
+    if (this.state.rec === 'recording') { if (this._mr) this._mr.stop(); return; }
+    try {
+      navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+        const mr = new MediaRecorder(stream); const chunks = [];
+        mr.ondataavailable = (e) => { if (e.data && e.data.size) chunks.push(e.data); };
+        mr.onstop = () => {
+          stream.getTracks().forEach((t) => t.stop()); clearInterval(this._recTimer);
+          if (this.state.recUrl) URL.revokeObjectURL(this.state.recUrl);
+          this.setState({ rec: 'done', recUrl: URL.createObjectURL(new Blob(chunks, { type: mr.mimeType || 'audio/webm' })) });
+        };
+        this._mr = mr; mr.start();
+        this.setState({ rec: 'recording', secs: 0 });
+        this._recTimer = setInterval(() => this.setState({ secs: this.state.secs + 1 }), 1000);
+      }).catch(() => this.setState({ rec: 'error' }));
+    } catch (e) { this.setState({ rec: 'error' }); }
+  }
+  markDone(id) {
+    const cur = this.state.done || [];
+    if (cur.indexOf(id) >= 0) return;
+    const d = cur.concat([id]);
+    this.saveA11y({ done: d });
+    this.setState({ done: d });
+  }
+  componentDidMount() {
+    if (this.onMount) this.onMount();
+    this._a11yTimer = setInterval(() => {
+      const a = this.loadA11y();
+      if (a && (a.big !== this.state.big || a.hc !== this.state.hc || a.lang !== this.state.lang || JSON.stringify(a.done) !== JSON.stringify(this.state.done) || JSON.stringify(a.reminder) !== JSON.stringify(this.state.reminder))) this.setState(a);
+    }, 400);
+  }
+  componentWillUnmount() { clearInterval(this._a11yTimer); clearInterval(this._recTimer); }
+  pickVoice(lang) {
+    /* One voice per language, chosen the same way every time (same browser = same voice). */
+    let vs = [];
+    try { vs = window.speechSynthesis.getVoices() || []; } catch (e) {}
+    const pool = vs.filter((v) => v.lang && v.lang.toLowerCase().indexOf(lang) === 0);
+    const prefer = lang === 'de'
+      ? ['Google Deutsch', 'Microsoft Katja', 'Microsoft Hedda', 'Anna', 'Petra', 'Markus']
+      : ['Google US English', 'Microsoft Aria', 'Microsoft Jenny', 'Microsoft Zira', 'Samantha', 'Google UK English Female', 'Karen', 'Daniel'];
+    for (let i = 0; i < prefer.length; i++) { const v = pool.filter((x) => x.name.indexOf(prefer[i]) >= 0)[0]; if (v) return v; }
+    const sorted = pool.slice().sort((a, b) => (b.localService ? 1 : 0) - (a.localService ? 1 : 0) || a.name.localeCompare(b.name));
+    return sorted[0] || null;
+  }
+  speakWord(text, slow) {
+    /* Same voice, same pitch, same two speeds for every word on every page. */
+    try {
+      const ss = window.speechSynthesis; ss.cancel();
+      const de = this.state.lang === 'de';
+      const u = new SpeechSynthesisUtterance(text);
+      const v = this.pickVoice(de ? 'de' : 'en');
+      if (v) { u.voice = v; u.lang = v.lang; } else { u.lang = de ? 'de-DE' : 'en-US'; }
+      u.rate = slow ? 0.55 : 0.85; u.pitch = 1; u.volume = 1;
+      ss.speak(u);
+    } catch (e) {}
+  }
+  speak(slow) {
+    const de = this.state.lang === 'de';
+    this.speakWord(de ? 'Lymphknoten' : 'lymph node', slow);
+    this.setState({ playMsg: (de ? 'Wiedergabe' : 'Playing') + (slow ? (de ? ' langsam' : ' slowly') : '') + ': ' + (de ? 'Lymphknoten' : 'lymph node') });
+    setTimeout(() => this.setState({ playMsg: '' }), 3000);
+  }
+
+  renderVals() {
+    const s = this.state;
+    const L = (en, d) => (s.lang === 'de' ? d : en);
+    const o = (on) => (on ? 'opt on' : 'opt');
+    const mm = (n) => Math.floor(n / 60) + ':' + String(n % 60).padStart(2, '0');
+    return { ...this.chrome(), help: s.help, helpLabel: s.help ? L('Hide the simpler version', 'Einfachere Version ausblenden') : L('I still need help', 'Ich brauche noch Hilfe'), toggleHelp: () => this.setState({ help: !s.help }),
+      playNormal: () => this.speak(false), playSlow: () => this.speak(true),
+      explain: [['yes', L('Yes', 'Ja')], ['almost', L('Almost', 'Fast')], ['not-yet', L('Not yet', 'Noch nicht')]].map(([id, label]) => ({ label, cls: o(s.ex === id), on: s.ex === id, pick: () => this.setState({ ex: id }) })),
+      notYet: s.ex === 'not-yet',
+      easyYes: o(s.easy === true), easyNo: o(s.easy === false),
+      setEasyYes: () => this.setState({ easy: true }), setEasyNo: () => this.setState({ easy: false }),
+      playMsg: s.playMsg,
+      recOn: s.rec === 'recording', recOff: s.rec !== 'recording',
+      recLabel: s.rec === 'recording' ? L('Stop recording', 'Aufnahme beenden') : (s.recUrl ? L('Record again', 'Erneut aufnehmen') : L('Record a voice note', 'Sprachnotiz aufnehmen')),
+      recStatus: s.rec === 'recording' ? L('Recording… ', 'Aufnahme läuft… ') + mm(s.secs)
+        : s.rec === 'error' ? L('The microphone isn’t available here. You can type your note instead.', 'Das Mikrofon ist hier nicht verfügbar. Sie können Ihre Notiz auch tippen.')
+        : (s.recUrl ? L('Recording saved (', 'Aufnahme gespeichert (') + mm(s.secs) + ')' : ''),
+      hasClip: !!s.recUrl && s.rec !== 'recording', recUrl: s.recUrl,
+      toggleRec: () => this.toggleRec(),
+      delClip: () => { try { URL.revokeObjectURL(s.recUrl); } catch (e) {} this.setState({ recUrl: '', rec: 'idle', secs: 0 }); } };
+  }
+}
+</script>
+</body>
+</html>
